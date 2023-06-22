@@ -1,17 +1,17 @@
 from functools import lru_cache
-# from .schema import Student, Mark
+from .schema import Dish
 
-# StudentStorageType = dict[int, Student]
-# MarkStorageType = dict[int, list[Mark]]
+# OrderStorageType = dict[int, list[Order]]
+# L_ORDERS: OrderStorageType = {}
 
-# STUDENTS: StudentStorageType = {}
-# MARKS: MarkStorageType = {}
+# @lru_cache()
+# def get_order_storage():
+#     return L_ORDERS
 
-# @lru_cache(maxsize=1)
-# def get_students_storage() -> StudentStorageType:
-#     return STUDENTS
+DishStorageType = dict[int, Dish]
 
+L_DISHES: DishStorageType = {}
 
-# @lru_cache(maxsize=1)
-# def get_marks_storage() -> MarkStorageType:
-#     return MARKS
+@lru_cache()
+def get_dishes_storage():
+    return L_DISHES
